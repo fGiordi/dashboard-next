@@ -8,7 +8,7 @@ interface IHeader {
 
 function Header({ openSidebar }: IHeader) {
 	return (
-		<header className='header'>
+		<header className='header '>
 			<div className='menu-icon'>
 				<BsJustify className='icon' onClick={openSidebar} />
 			</div>
