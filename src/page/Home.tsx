@@ -40,7 +40,7 @@ function Home() {
 						<Tooltip />
 						<Legend />
 						<Bar dataKey="clickThroughRates" fill="#8884d8" />
-						<Bar dataKey="conversionRates" fill="#df3" />
+						<Bar dataKey="conversionRates" fill="#eee9" />
 						<Bar dataKey="totalSales" fill="#82ca9d" />
 					</BarChart>
 				</ResponsiveContainer>
@@ -62,8 +62,8 @@ function Home() {
 						<YAxis />
 						<Tooltip />
 						<Legend />
-						<Line type="monotone" dataKey="product1" stroke="#8884d8" activeDot={{ r: 8 }} />
-						<Line type="monotone" dataKey="product2" stroke="#3df" activeDot={{ r: 8 }} />
+						<Line type="monotone" dataKey="product1" stroke="red" />
+						<Line type="monotone" dataKey="product2" stroke="#3df"  />
 						<Line type="monotone" dataKey="product3" stroke="#82ca9d" />
 					</LineChart>
 				</ResponsiveContainer>
@@ -87,8 +87,8 @@ function Home() {
 						<YAxis />
 						<Tooltip />
 						<Legend />
-						<Line type="monotone" dataKey="competitorA" stroke="#8884d8" activeDot={{ r: 8 }} />
-						<Line type="monotone" dataKey="competitorB" stroke="#3df" activeDot={{ r: 8 }} />
+						<Line type="monotone" dataKey="competitorA" stroke="#8884d8"/>
+						<Line type="monotone" dataKey="competitorB" stroke="#3df"/>
 						<Line type="monotone" dataKey="competitorC" stroke="#82ca9d" />
 					</LineChart>
 				</ResponsiveContainer>

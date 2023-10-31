@@ -8,7 +8,7 @@ export interface ICard {
 
 export default function Card({title, icon, totalItems}:ICard) {
 	return (
-		<div className='card'>
+		<div className='card rounded-lg'>
 			<div className='card-inner'>
 				<h3>{title}</h3>
 				{icon}
