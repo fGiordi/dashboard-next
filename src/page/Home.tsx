@@ -69,7 +69,7 @@ function Home() {
 				</ResponsiveContainer>
 			</div>
 
-			<div className='charts'>
+			<div className='charts-full'>
 				<ResponsiveContainer width="100%" height="100%">
 					<LineChart
 						width={500}
