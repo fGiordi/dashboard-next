@@ -3,6 +3,7 @@ import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill }
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line }
 	from 'recharts';
 import { useStore } from '../store';
+import Card from '../components/Card';
 
 function Home() {
 	const { data, productSalesData, competitorData, notificationAmount } = useStore();
@@ -14,34 +15,10 @@ function Home() {
 			</div>
 
 			<div className='main-cards'>
-				<div className='card'>
-					<div className='card-inner'>
-						<h3>Campaign Performance Metrics</h3>
-						<BsFillArchiveFill className='card_icon' />
-					</div>
-					<h1>{data.length}</h1>
-				</div>
-				<div className='card'>
-					<div className='card-inner'>
-						<h3>Product Sales Data</h3>
-						<BsFillGrid3X3GapFill className='card_icon' />
-					</div>
-					<h1>{productSalesData.length}</h1>
-				</div>
-				<div className='card'>
-					<div className='card-inner'>
-						<h3>Competitor/Market Trends</h3>
-						<BsPeopleFill className='card_icon' />
-					</div>
-					<h1>33</h1>
-				</div>
-				<div className='card'>
-					<div className='card-inner'>
-						<h3>Notifications</h3>
-						<BsFillBellFill className='card_icon' />
-					</div>
-					<h1>{notificationAmount}</h1>
-				</div>
+				<Card title="Campaign Performance Metrics" icon={<BsFillArchiveFill  className='card_icon'/>} totalItems={data.length} />
+				<Card title="Product Sales Data" icon={<BsFillGrid3X3GapFill  className='card_icon'/>} totalItems={productSalesData.length} />
+				<Card title="Competitor/Market Trends" icon={<BsPeopleFill  className='card_icon'/>} totalItems={competitorData.length} />
+				<Card title="Notifications" icon={<BsFillBellFill  className='card_icon'/>} totalItems={notificationAmount} />
 			</div>
 
 			<div className='charts'>
