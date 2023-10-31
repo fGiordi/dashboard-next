@@ -1,0 +1,134 @@
+{
+	"campaignInfo": [
+		{
+			"name": "Jan",
+			"clickThroughRates": 6500,
+			"conversionRates": 4600,
+			"totalSales": 5400
+		},
+		{
+			"name": "Feb",
+			"clickThroughRates": 3000,
+			"conversionRates": 6398,
+			"totalSales": 8210
+		},
+		{
+			"name": "Mar",
+			"clickThroughRates": 4800,
+			"conversionRates": 5800,
+			"totalSales": 3290
+		},
+		{
+			"name": "Apr",
+			"clickThroughRates": 4780,
+			"conversionRates": 8908,
+			"totalSales": 6000
+		},
+		{
+			"name": "May",
+			"clickThroughRates": 7890,
+			"conversionRates": 5800,
+			"totalSales": 4181
+		},
+		{
+			"name": "Jun",
+			"clickThroughRates": 6390,
+			"conversionRates": 7800,
+			"totalSales": 4500
+		},
+		{
+			"name": "Jul",
+			"clickThroughRates": 5490,
+			"conversionRates": 6300,
+			"totalSales": 7100
+		}
+	],
+	"productInfo": [
+ 		{
+			"name": "Jan",
+			"product1": 2000,
+			"product2": 4500,
+			"product3": 3000
+		},
+		{
+			"name": "Feb",
+			"product1": 3000,
+			"product2": 6398,
+			"product3": 8210
+		},
+		{
+			"name": "Mar",
+			"product1": 4800,
+			"product2": 5800,
+			"product3": 3290
+		},
+		{
+			"name": "Apr",
+			"product1": 4780,
+			"product2": 8908,
+			"product3": 6000
+		},
+		{
+			"name": "May",
+			"product1": 7890,
+			"product2": 5800,
+			"product3": 4181
+		},
+		{
+			"name": "Jun",
+			"product1": 6390,
+			"product2": 7800,
+			"product3": 4500
+		},
+		{
+			"name": "Jul",
+			"product1": 5490,
+			"product2": 6300,
+			"product3": 7100
+		}
+	],
+	"competitorInfo": [
+		{
+			"name": "Jan",
+			"competitorA": 4000,
+			"competitorB": 6500,
+			"competitorC": 5000
+		},
+		{
+			"name": "Feb",
+			"competitorA": 2500,
+			"competitorB": 7800,
+			"competitorC": 5800
+		},
+		{
+			"name": "Mar",
+			"competitorA": 2800,
+			"competitorB": 6500,
+			"competitorC": 9500
+		},
+		{
+			"name": "Apr",
+			"competitorA": 3800,
+			"competitorB": 4700,
+			"competitorC": 5000
+		},
+		{
+			"name": "May",
+			"competitorA": 5700,
+			"competitorB": 5071,
+			"competitorC": 7421
+		},
+		 {
+			"name": "Jun",
+			"competitorA": 5900,
+			"competitorB": 6782,
+			"competitorC": 7000
+		},
+		{
+			"name": "Jul",
+			"competitorA": 6800,
+			"competitorB": 8500,
+			"competitorC": 9000 
+		}
+	]
+}

@@ -1,0 +1,117 @@
+{
+	"campaignInfo": [
+		{
+			"name": "Jan",
+			"clickThroughRates": 7500,
+			"conversionRates": 8600,
+			"totalSales": 1400
+		},
+		{
+			"name": "Feb",
+			"clickThroughRates": 1800,
+			"conversionRates": 2398,
+			"totalSales": 6210
+		},
+		{
+			"name": "Mar",
+			"clickThroughRates": 8800,
+			"conversionRates": 6800,
+			"totalSales": 2290
+		},
+		{
+			"name": "Apr",
+			"clickThroughRates": 9780,
+			"conversionRates": 2908,
+			"totalSales": 2200
+		},
+		{
+			"name": "May",
+			"clickThroughRates": 4990,
+			"conversionRates": 7800,
+			"totalSales": 5981
+		},
+		{
+			"name": "Jun",
+			"clickThroughRates": 1990,
+			"conversionRates": 7800,
+			"totalSales": 3900
+		}
+		
+	],
+	"productInfo": [
+ 		{
+			"name": "Jan",
+			"product1": 8500,
+			"product2": 2500,
+			"product3": 9000
+		},
+		{
+			"name": "Feb",
+			"product1": 7000,
+			"product2": 3398,
+			"product3": 7210
+		},
+		{
+			"name": "Mar",
+			"product1": 1800,
+			"product2": 8800,
+			"product3": 9290
+		},
+		{
+			"name": "Apr",
+			"product1": 5780,
+			"product2": 2908,
+			"product3": 4000
+		},
+		{
+			"name": "May",
+			"product1": 5890,
+			"product2": 7800,
+			"product3": 2181
+		},
+		{
+			"name": "Jun",
+			"product1": 5390,
+			"product2": 9800,
+			"product3": 1500
+		}
+	],
+	"competitorInfo": [
+		{
+			"name": "Jan",
+			"competitorA": 4900,
+			"competitorB": 3700,
+			"competitorC": 4900
+		},
+		{
+			"name": "Feb",
+			"competitorA": 4500,
+			"competitorB": 7800,
+			"competitorC": 3800
+		},
+		{
+			"name": "Mar",
+			"competitorA": 1800,
+			"competitorB": 3500,
+			"competitorC": 6500
+		},
+		{
+			"name": "Apr",
+			"competitorA": 5800,
+			"competitorB": 8700,
+			"competitorC": 2000
+		},
+		{
+			"name": "May",
+			"competitorA": 7700,
+			"competitorB": 9071,
+			"competitorC": 3421
+		},
+		 {
+			"name": "Jun",
+			"competitorA": 2900,
+			"competitorB": 1782,
+			"competitorC": 6000
+		}
+	]
+}
