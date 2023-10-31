@@ -9,7 +9,6 @@ interface IHeader {
 	openSidebar: () => void;
 }
 
-
 function Header({ openSidebar }: IHeader) {
 	const {handleCampaignChange} = useStore()
 	return (

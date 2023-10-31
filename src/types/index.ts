@@ -24,9 +24,6 @@ export type Store = {
   data: DataPoint[];
   productSalesData: ProductSales[];
   competitorData: Competitor[];
-	setData: (data: DataPoint[]) => void
-	setProductSalesData: (productSalesData: ProductSales[]) => void
-	setCompetitorData: (competitorData: Competitor[]) => void
 	handleCampaignChange: (name: CampaignValues) => void
 	notificationAmount: number
 };
