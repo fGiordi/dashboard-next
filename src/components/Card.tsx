@@ -8,7 +8,7 @@ export interface ICard {
 
 export default function Card({title, icon, totalItems}:ICard) {
 	return (
-		<div className='card rounded-lg'>
+		<div className='card rounded-lg cursor-not-allowed'>
 			<div className='card-inner'>
 				<h3>{title}</h3>
 				{icon}
