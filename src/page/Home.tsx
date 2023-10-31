@@ -5,8 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { useStore } from '../store';
 
 function Home() {
-	const { data, productSalesData, competitorData } = useStore();
-	// Pulling data from the store
+	const { data, productSalesData, competitorData, notificationAmount } = useStore();
 
 	return (
 		<main className='main-container'>
@@ -20,14 +19,14 @@ function Home() {
 						<h3>Campaign Performance Metrics</h3>
 						<BsFillArchiveFill className='card_icon' />
 					</div>
-					<h1>300</h1>
+					<h1>{data.length}</h1>
 				</div>
 				<div className='card'>
 					<div className='card-inner'>
 						<h3>Product Sales Data</h3>
 						<BsFillGrid3X3GapFill className='card_icon' />
 					</div>
-					<h1>12</h1>
+					<h1>{productSalesData.length}</h1>
 				</div>
 				<div className='card'>
 					<div className='card-inner'>
@@ -41,7 +40,7 @@ function Home() {
 						<h3>Notifications</h3>
 						<BsFillBellFill className='card_icon' />
 					</div>
-					<h1>42</h1>
+					<h1>{notificationAmount}</h1>
 				</div>
 			</div>
 
