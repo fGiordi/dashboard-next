@@ -22,9 +22,9 @@ function Header({ openSidebar }: IHeader) {
 			</select>
 			</div>
 			<div className='header-right'>
-				<BsFillBellFill className='icon' />
-				<BsFillEnvelopeFill className='icon' />
-				<BsPersonCircle className='icon' />
+				<BsFillBellFill className='icon cursor-not-allowed' />
+				<BsFillEnvelopeFill className='icon cursor-not-allowed' />
+				<BsPersonCircle className='icon cursor-not-allowed' />
 			</div>
 		</header>
 	)

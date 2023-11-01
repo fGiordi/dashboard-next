@@ -34,6 +34,10 @@
 - [ ] I went with a conventional dashboard look and feel with this one. Sidebar on the left to display a consistent menu or actions to mimic different places you can go to.
 - [ ] I Have the Main Section to contain the 3 graphs and also have menus on top of the graphs to reflect realtime overview data. ( Just in case, maybe you would like to go into more detailed page, however, this is disabled for now). You can hover over the bordered card menu section to see.
 - [ ] I went with a Bar graph to display the relationship between shared different data points over time and 2 line graphs to showcase comparisions over different trend nicely over time.
+- [ ] For Mobile, I went with a solution that allowed the user to scroll across the screen, so that the large dataset can be viewed at a minimum width, so we can view everything that is important on smaller devices, to avoid it being small and tiny on smaller screens.
+- [ ] So you can scroll on mobile just so that you can still view the data, However, on desktop, things are back to normal and there should not be a scroll for a larger screen that is big enough to display the graphs accordingly.
+- [ ] All Side bar menu items are also disabled as we do not need to go anywhere, the icons on the header are also disabled, so when you hover over them you will notice the cursor change.
+- [ ] Notification is nothing fancy, its just mimicing a simple notification change or update when you filter or switch between the campaigns.
 
 ***### Live Deployed Link:[https://dashboard-next-pjs4.vercel.app/]***
 
