@@ -47,5 +47,21 @@ export const useStore = create<Store>((set, get) => ({
 		data: [],
 		productSalesData: [],
 		competitorData: []
-	}
+	},
+	findHighestSaleMonth: () => {
+    const { productSalesData } = get();
+    let highestSales = 0;
+    let highestMonth = '';
+
+    productSalesData.forEach((monthData) => {
+      if (monthData.product1 + monthData.product2 + monthData.product3 > highestSales) {
+        highestSales = monthData.product1 + monthData.product2 + monthData.product3;
+        highestMonth = monthData.name;
+      }
+    });
+
+		console.log('Highest Month', highestMonth)
+
+    return highestMonth;
+  },
 }));

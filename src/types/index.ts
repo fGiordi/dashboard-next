@@ -34,7 +34,9 @@ export type Store = {
 	notificationAmount: number,
 	handleMonthChange: (month: string) => void
 	filteredProps: IFilteredProps,
-	hasFiltered: boolean
+	hasFiltered: boolean,
+	findHighestSaleMonth: () => void;
+
 };
 
 

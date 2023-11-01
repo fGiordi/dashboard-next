@@ -9,14 +9,22 @@ interface IHeader {
 }
 
 function Header({ openSidebar }: IHeader) {
-	const {handleCampaignChange, handleMonthChange, hasFiltered} = useStore()
+	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth} = useStore()
 
 	const [selectedCampaign, setSelectedCampaign] = useState('move')
 	const [selectedMonth, setSelectedMonth] = useState('Choose a Month')
+	const [selectedSalesOption, setSelectedSalesOption] = useState('By Number of Sales')
 
 	const handleCampaign = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		handleCampaignChange(event.target.value as CampaignValues)
 		setSelectedCampaign(event.target.value as CampaignValues)
+  };
+
+	const handleNumSales = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		setSelectedSalesOption(event.target.value)
+		if(event.target.value === 'highest') {
+			findHighestSaleMonth()
+		}
   };
 
 	const handleMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -31,7 +39,7 @@ function Header({ openSidebar }: IHeader) {
 	}, [hasFiltered])
 
 	return (
-		<header className='header '>
+		<header className='header'>
 			<div className='menu-icon'>
 				<BsJustify className='icon' onClick={openSidebar} />
 			</div>
@@ -41,7 +49,20 @@ function Header({ openSidebar }: IHeader) {
 				<option value="move">Campaign Move</option>
 				<option value="shooters">Campaign Shooters</option>
 			</select>
+
+			
+
+			
 			</div>
+
+			<div>
+				<select value={selectedSalesOption} onChange={handleNumSales} id="sales" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+				<option selected disabled>By Number of Sales</option>
+				<option value="highest">Highest Month for Product Sales</option>
+				<option value="lowest">Lowest Month for Product Sales</option>
+			</select>
+			</div>
+			
 			<div className='header-right'>
 			<select onChange={handleMonth} value={selectedMonth} id="month" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 				<option selected disabled>Choose a Month</option>
@@ -53,6 +74,9 @@ function Header({ openSidebar }: IHeader) {
 				<option value="Jun">June</option>
 				<option value="Jul">July</option>
 			</select>
+
+			
+
 				
 			</div>
 		</header>

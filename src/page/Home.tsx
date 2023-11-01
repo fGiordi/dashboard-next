@@ -5,9 +5,14 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { useStore } from '../store';
 import Card from '../components/Card';
 import TextTitle from '../components/TextTitle';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 function Home() {
 	const { data, productSalesData, competitorData, notificationAmount, hasFiltered, filteredProps } = useStore();
+
+	const { isMobile, isTablet, isDesktop } = useMediaQuery();
+
+	console.log('filteredProps', filteredProps)
 
 	const updatedCampaign = hasFiltered ? filteredProps.data : data
 	const updatedProducts = hasFiltered ? filteredProps.productSalesData : productSalesData
@@ -29,7 +34,7 @@ function Home() {
 			<div className='charts overflow-x-scroll xl:overflow-hidden'>
 				<div className='flex flex-col'>
 					<TextTitle title="Campaign Metrics" />
-					<ResponsiveContainer width={500} height={300}>
+					<ResponsiveContainer width={isMobile ? 500 : '100%'} height={300}>
 						<BarChart
 							width={500}
 							height={300}
@@ -57,7 +62,7 @@ function Home() {
 
 				<div className='flex flex-col'>
 					<TextTitle title="Product Sales" />
-					<ResponsiveContainer width={500} height={300} >
+					<ResponsiveContainer width={isMobile ? 500 : '100%'}height={300} >
 						<LineChart
 							width={500}
 							height={300}
