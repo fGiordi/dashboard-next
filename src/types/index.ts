@@ -20,12 +20,21 @@ export type Competitor = {
 
 export type CampaignValues = 'move'| 'shooters'
 
+interface IFilteredProps  {
+	data: DataPoint[];
+	productSalesData: ProductSales[];
+  competitorData: Competitor[];
+}
+
 export type Store = {
   data: DataPoint[];
   productSalesData: ProductSales[];
   competitorData: Competitor[];
 	handleCampaignChange: (name: CampaignValues) => void
-	notificationAmount: number
+	notificationAmount: number,
+	handleMonthChange: (month: string) => void
+	filteredProps: IFilteredProps,
+	hasFiltered: boolean
 };
 
 

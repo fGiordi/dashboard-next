@@ -7,7 +7,11 @@ import Card from '../components/Card';
 import TextTitle from '../components/TextTitle';
 
 function Home() {
-	const { data, productSalesData, competitorData, notificationAmount } = useStore();
+	const { data, productSalesData, competitorData, notificationAmount, hasFiltered, filteredProps } = useStore();
+
+	const updatedCampaign = hasFiltered ? filteredProps.data : data
+	const updatedProducts = hasFiltered ? filteredProps.productSalesData : productSalesData
+	const updatedCompetitor = hasFiltered ? filteredProps.competitorData : competitorData
 
 	return (
 		<main className='main-container'>
@@ -29,7 +33,7 @@ function Home() {
 						<BarChart
 							width={500}
 							height={300}
-							data={data}
+							data={updatedCampaign}
 							margin={{
 								top: 5,
 								right: 30,
@@ -57,7 +61,7 @@ function Home() {
 						<LineChart
 							width={500}
 							height={300}
-							data={productSalesData}
+							data={updatedProducts}
 							margin={{
 								top: 5,
 								right: 30,
@@ -86,7 +90,7 @@ function Home() {
 					<LineChart
 						width={500}
 						height={300}
-						data={competitorData}
+						data={updatedCompetitor}
 						margin={{
 							top: 5,
 							right: 30,
