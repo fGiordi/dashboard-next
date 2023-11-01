@@ -61,7 +61,7 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: #263043;
+  background-color: rgb(1, 53, 63);
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -119,7 +119,7 @@ body {
   grid-area: main;
   overflow-y: auto;
   padding: 20px 20px;
-  color: rgba(255, 255, 255, 0.95);
+  color: white
 }
 
 .main-title {
@@ -177,9 +177,10 @@ body {
 }
 
 .charts-full {
-  grid-template-columns: 1fr;
+  grid-template-columns: 0.7fr;
   display: grid;
   height: 300px;
+  margin-top: 20px;
 }
 
 /* End Main  */

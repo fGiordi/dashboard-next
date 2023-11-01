@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsJustify }
 	from 'react-icons/bs'
 import { useStore } from '../store';

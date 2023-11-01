@@ -21,8 +21,8 @@ function Home() {
 				<Card title="Notifications" icon={<BsFillBellFill  className='card_icon'/>} totalItems={notificationAmount} />
 			</div>
 
-			<div className='charts'>
-				<ResponsiveContainer width="100%" height="100%">
+			<div className='charts overflow-x-scroll lg:overflow-hidden'>
+				<ResponsiveContainer width={500} height={300}>
 					<BarChart
 						width={500}
 						height={300}
@@ -33,6 +33,7 @@ function Home() {
 							left: 20,
 							bottom: 5,
 						}}
+						
 					>
 						<CartesianGrid strokeDasharray="3 3" />
 						<XAxis dataKey="name" />
@@ -45,7 +46,7 @@ function Home() {
 					</BarChart>
 				</ResponsiveContainer>
 
-				<ResponsiveContainer width="100%" height="100%">
+				<ResponsiveContainer width={500} height={300} >
 					<LineChart
 						width={500}
 						height={300}
@@ -69,8 +70,8 @@ function Home() {
 				</ResponsiveContainer>
 			</div>
 
-			<div className='charts-full'>
-				<ResponsiveContainer width="100%" height="100%">
+			<div className='charts-full overflow-x-scroll lg:overflow-hidden'>
+				<ResponsiveContainer width={500} height="100%">
 					<LineChart
 						width={500}
 						height={300}
