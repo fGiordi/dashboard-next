@@ -1,6 +1,6 @@
 import {
 	BsFillGearFill,
-	BsFillGrid3X3GapFill, BsGrid1X2Fill, BsListCheck, BsMenuButtonWideFill
+	BsFillGrid3X3GapFill,  BsMenuButtonWideFill
 } from 'react-icons/bs'
 
 interface ISidebar {
