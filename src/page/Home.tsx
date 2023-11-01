@@ -22,7 +22,7 @@ function Home() {
 				<Card title="Notifications" icon={<BsFillBellFill className='card_icon' />} totalItems={notificationAmount} />
 			</div>
 
-			<div className='charts overflow-x-scroll lg:overflow-hidden'>
+			<div className='charts overflow-x-scroll xl:overflow-hidden'>
 				<div className='flex flex-col'>
 					<TextTitle title="Campaign Metrics" />
 					<ResponsiveContainer width={500} height={300}>
@@ -79,7 +79,7 @@ function Home() {
 
 			</div>
 
-			<div className='charts-full overflow-x-scroll lg:overflow-hidden'>
+			<div className='charts-full overflow-x-scroll xl:overflow-hidden'>
 				<div className='flex flex-col'>
 					<TextTitle title="Competitor Comparison"/>
 					<ResponsiveContainer width={800} height="100%">
