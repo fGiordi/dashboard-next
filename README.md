@@ -1,4 +1,4 @@
-## React Analytics Dashboard Task
+## React Analytics Dashboard Task [https://dashboard-next-pjs4.vercel.app/]
 - Required to create a basic analytics dashboard using React. The dashboard will display mock campaign performance metrics, product sales data, and competitor/market trends.
 - Dashboard should include the following
    - [ ] Campaign Performance Metrics: Display metrics such as click-through rates, conversion rates, and total sales generated from a campaign.
@@ -34,6 +34,8 @@
 - [ ] I went with a conventional dashboard look and feel with this one. Sidebar on the left to display a consistent menu or actions to mimic different places you can go to.
 - [ ] I Have the Main Section to contain the 3 graphs and also have menus on top of the graphs to reflect realtime overview data. ( Just in case, maybe you would like to go into more detailed page, however, this is disabled for now). You can hover over the bordered card menu section to see.
 - [ ] I went with a Bar graph to display the relationship between shared different data points over time and 2 line graphs to showcase comparisions over different trend nicely over time.
+
+***### Live Deployed Link:[https://dashboard-next-pjs4.vercel.app/]***
 
 ### What Do you need to run the application
  - [ ] GIT installed or github desktop ( easier option by far)
