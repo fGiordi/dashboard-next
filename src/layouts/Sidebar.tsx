@@ -18,17 +18,8 @@ function Sidebar({ openSidebarToggle, openSidebar }: ISidebar) {
 				<span className='icon close_icon' onClick={openSidebarToggle}>X</span>
 			</div>
 			<ul className='sidebar-list'>
-				<li className='sidebar-list-item'>
-					<a href="">
-						<BsGrid1X2Fill className='icon' /> Dashboard
-					</a>
-				</li>
-				<li className='sidebar-list-item'>
-					<a href="" className='cursor-not-allowed'>
-						<BsListCheck className='icon' /> Inventory
-					</a>
-				</li>
-				<li className='sidebar-list-item'>
+				
+				<li className='sidebar-list-item cursor-not-allowed'>
 					<a href="" className='cursor-not-allowed'>
 						<BsMenuButtonWideFill className='icon' /> Reports
 					</a>
