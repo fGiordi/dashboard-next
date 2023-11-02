@@ -12,8 +12,6 @@ function Home() {
 
 	const { isMobile } = useMediaQuery();
 
-	console.log('filteredProps', filteredProps)
-
 	const updatedCampaign = hasFiltered ? filteredProps.data : data
 	const updatedProducts = hasFiltered ? filteredProps.productSalesData : productSalesData
 	const updatedCompetitor = hasFiltered ? filteredProps.competitorData : competitorData
@@ -31,7 +29,7 @@ function Home() {
 				<Card title="Notifications" icon={<BsFillBellFill className='card_icon' />} totalItems={notificationAmount} />
 			</div>
 
-			<div className='charts overflow-x-scroll 2xl:overflow-hidden'>
+			<div className='charts overflow-x-scroll :overflow-hidden'>
 				<div className='flex flex-col'>
 					<TextTitle title="Campaign Metrics" />
 					<ResponsiveContainer width={isMobile ? 500 : '100%'} height={300}>
@@ -45,10 +43,11 @@ function Home() {
 								left: 20,
 								bottom: 5,
 							}}
+
 						>
 							<CartesianGrid strokeDasharray="3 3" />
-							<XAxis dataKey="name"  />
-							<YAxis />
+							<XAxis dataKey="name" stroke='white' />
+							<YAxis stroke='white'/>
 							<Tooltip />
 							<Legend />
 							<Bar dataKey="clickThroughRates" name='Click Through Rates' fill="#8884d8" />
@@ -61,7 +60,7 @@ function Home() {
 
 				<div className='flex flex-col'>
 					<TextTitle title="Product Sales" />
-					<ResponsiveContainer width={isMobile ? 500 : '100%'} height={300} >
+					<ResponsiveContainer width={'100%'} height={300} >
 						<LineChart
 							width={500}
 							height={300}
@@ -74,8 +73,8 @@ function Home() {
 							}}
 						>
 							<CartesianGrid strokeDasharray="3 3" />
-							<XAxis dataKey="name" />
-							<YAxis  />
+							<XAxis dataKey="name" stroke='white' />
+							<YAxis stroke='white' />
 							<Tooltip />
 							<Legend />
 							<Line type="monotone" dataKey="product1"  name='Sneezy Kicks' stroke="red" />
@@ -92,7 +91,7 @@ function Home() {
 					<TextTitle title="Competitor Comparison"/>
 					<ResponsiveContainer width={isMobile ? 500 : '100%'} height="100%">
 					<LineChart
-						width={400}
+						width={500}
 						height={300}
 						data={updatedCompetitor}
 						margin={{
@@ -103,8 +102,8 @@ function Home() {
 						}}
 					>
 						<CartesianGrid strokeDasharray="3 3" />
-						<XAxis dataKey="name"  />
-						<YAxis />
+						<XAxis dataKey="name" stroke='white'/>
+						<YAxis stroke='white' />
 						<Tooltip />
 						<Legend />
 						<Line type="monotone" dataKey="competitorA" name="Global Stores PTY" stroke="#8884d8" />
