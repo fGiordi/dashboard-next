@@ -13,6 +13,7 @@
    - [ ] Implement state for the flow of data in our app
    - [ ] Anyform or structure for mock data can be used
    - [ ] Code should be well structured, readable and reusable
+   - [ ] Dashboard should be interactive and user should filter specific data
 
    ### Brief Summary and Summary of Dashboard
    - [ ] I have built a brief UI Dashboard using React JS, Tailwind css and Rechart to display 3 sorts of data for 2 different Campaigns that you can filter between.
