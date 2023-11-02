@@ -181,6 +181,8 @@ body {
   display: grid;
   height: 300px;
   margin-top: 20px;
+  align-content: center;
+  justify-content: center;
 }
 
 /* End Main  */

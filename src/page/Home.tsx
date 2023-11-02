@@ -45,10 +45,9 @@ function Home() {
 								left: 20,
 								bottom: 5,
 							}}
-
 						>
 							<CartesianGrid strokeDasharray="3 3" />
-							<XAxis dataKey="name" />
+							<XAxis dataKey="name"  />
 							<YAxis />
 							<Tooltip />
 							<Legend />
@@ -76,11 +75,11 @@ function Home() {
 						>
 							<CartesianGrid strokeDasharray="3 3" />
 							<XAxis dataKey="name" />
-							<YAxis />
+							<YAxis  />
 							<Tooltip />
 							<Legend />
 							<Line type="monotone" dataKey="product1"  name='Sneezy Kicks' stroke="red" />
-							<Line type="monotone" dataKey="product2"  name='Jady Jackets' stroke="#3df" />
+							<Line type="monotone" dataKey="product2"  name='Dada Jackets' stroke="#3df" />
 							<Line type="monotone" dataKey="product3"  name="Mini Shirts" stroke="#82ca9d" />
 						</LineChart>
 					</ResponsiveContainer>
@@ -93,7 +92,7 @@ function Home() {
 					<TextTitle title="Competitor Comparison"/>
 					<ResponsiveContainer width={isMobile ? 500 : '100%'} height="100%">
 					<LineChart
-						width={500}
+						width={400}
 						height={300}
 						data={updatedCompetitor}
 						margin={{
@@ -104,7 +103,7 @@ function Home() {
 						}}
 					>
 						<CartesianGrid strokeDasharray="3 3" />
-						<XAxis dataKey="name" />
+						<XAxis dataKey="name"  />
 						<YAxis />
 						<Tooltip />
 						<Legend />
