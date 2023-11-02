@@ -9,7 +9,7 @@ interface IHeader {
 }
 
 function Header({ openSidebar }: IHeader) {
-	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth, findLowestSaleMonth, filteredProps} = useStore()
+	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth, findLowestSaleMonth} = useStore()
 
 	const [selectedCampaign, setSelectedCampaign] = useState('move')
 	const [selectedMonth, setSelectedMonth] = useState('Choose a Month')

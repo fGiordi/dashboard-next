@@ -13,7 +13,7 @@
    - [ ] Implement state for the flow of data in our app
    - [ ] Anyform or structure for mock data can be used
    - [ ] Code should be well structured, readable and reusable
-   - [ ] Dashboard should be interactive and user should filter specific data
+   - [ ] Dashboard should be interactive and user should filter specific data.
 
    ### Brief Summary and Summary of Dashboard
    - [ ] I have built a brief UI Dashboard using React JS, Tailwind css and Rechart to display 3 sorts of data for 2 different Campaigns that you can filter between.
@@ -23,8 +23,9 @@
       - [ ] Competitor Trends
    - [ ] You can switch between the different Campaigns to filter and display the different data sets based on the selected campaigns.
    - [ ] You can also filter based on the month, by selecting which ever month you would like to filter the content for, it will automatically load the data.
-   - [ ] You should also be able to filter based on highest and lowest product sales based on Month. 
-- [ ] Once you get to the landing page, you should be able to filter based on the Campaign by selecting on the top left Dropdown menu which says 'Choose a Campaign'
+   - [ ] You should also be able to filter based on highest and lowest product sales based on Month. ( this is part of the same dropdown as the month)
+   - [ ] These 2 help to make informed data driven decisions, like the month with the highest sales vs lowest sales.
+- [ ] Once you get to the landing page, you should be able to filter based on the Campaign by selecting on the top left Dropdown menu which says 'Choose a Campaign' or you can filter based on specific month and month with highest product sale vs lowest product sale.
 - [ ] The 2 Campaigns We currently have running at the moment are
    - [ ] Campaign Move (this is the default campaign selected)
    - [ ] Campaign Shooters ( you will need to select this to see the data filtered )
@@ -33,6 +34,7 @@
 ### Assumptions made 
 - [ ] I did not include any APIs, I just figured let me structure my JSON data in a way that is meaningful enough for it to be consistent through different graphs.
 - [ ] When you select a different campaign the month filter will be cleared and reset, just so that its clear that you have selected a new data set and would like to filter based on the new data set or campaign.
+- [ ] Because the I am displaying data on a specifcic month base, I combined the individual month filter and the month with the highest sales and lowest sales too for the products.
 ### Design Decisions
 - [ ] I went with a conventional dashboard look and feel with this one. Sidebar on the left to display a consistent menu or actions to mimic different places you can go to.
 - [ ] I Have the Main Section to contain the 3 graphs and also have menus on top of the graphs to reflect realtime overview data. ( Just in case, maybe you would like to go into more detailed page, however, this is disabled for now). You can hover over the bordered card menu section to see.
