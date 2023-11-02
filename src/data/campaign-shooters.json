@@ -54,8 +54,8 @@
 		{
 			"name": "Mar",
 			"product1": 1800,
-			"product2": 8800,
-			"product3": 9290
+			"product2": 1800,
+			"product3": 1290
 		},
 		{
 			"name": "Apr",
@@ -71,9 +71,9 @@
 		},
 		{
 			"name": "Jun",
-			"product1": 5390,
+			"product1": 9390,
 			"product2": 9800,
-			"product3": 1500
+			"product3": 9500
 		}
 	],
 	"competitorInfo": [

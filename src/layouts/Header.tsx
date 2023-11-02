@@ -9,39 +9,33 @@ interface IHeader {
 }
 
 function Header({ openSidebar }: IHeader) {
-	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth, findLowestSaleMonth} = useStore()
+	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth, findLowestSaleMonth, filteredProps} = useStore()
 
 	const [selectedCampaign, setSelectedCampaign] = useState('move')
 	const [selectedMonth, setSelectedMonth] = useState('Choose a Month')
-	const [selectedSalesOption, setSelectedSalesOption] = useState('Product Sales filter')
 
 	const handleCampaign = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		handleCampaignChange(event.target.value as CampaignValues)
 		setSelectedCampaign(event.target.value as CampaignValues)
   };
 
-	const handleNumSales = (event: React.ChangeEvent<HTMLSelectElement>) => {
+	const handleMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		const {value} = event.target
-		setSelectedSalesOption(event.target.value)
 		if(value === 'highest') {
 			findHighestSaleMonth()
+			setSelectedMonth(value)
 		} else if(value === 'lowest') {
 			findLowestSaleMonth()
+			setSelectedMonth(value)
+		} else {
+			handleMonthChange(value)
+			setSelectedMonth(value)
 		}
-  };
-
-	const handleMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
-		handleMonthChange(event.target.value)
-		setSelectedMonth(event.target.value)
   };
 
 	useEffect(() => {
 		if(!hasFiltered) {
 			setSelectedMonth('Choose a Month')
-			setSelectedSalesOption('Product Sales filter')
-		} if(hasFiltered) {
-			// when filtering by month reset the product sales option
-			setSelectedSalesOption('Product Sales filter')
 		}
 	}, [hasFiltered])
 
@@ -56,20 +50,13 @@ function Header({ openSidebar }: IHeader) {
 				<option value="move">Campaign Move</option>
 				<option value="shooters">Campaign Shooters</option>
 			</select>
-			
 			</div>
 
-			{/* <div className='header-center'>
-				<select value={selectedSalesOption} onChange={handleNumSales} id="sales" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-				<option selected disabled>Product Sales filter</option>
-				<option value="highest" className='bg-green-500 text-white'>Highest Month for Product Sales</option>
-				<option value="lowest" className='bg-red-500 text-white'>Lowest Month for Product Sales</option>
-			</select>
-			</div> */}
-			
 			<div className='header-right'>
 			<select onChange={handleMonth} value={selectedMonth} id="month" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 				<option selected disabled>Choose a Month</option>
+				<option value="highest" className='bg-green-500 text-white'>Highest Month for Product Sales</option>
+				<option value="lowest" className='bg-red-500 text-white'>Lowest Month for Product Sales</option>
 				<option value="Jan">Jan</option>
 				<option value="Feb">Feb</option>
 				<option value="Mar">March</option>
@@ -78,9 +65,6 @@ function Header({ openSidebar }: IHeader) {
 				<option value="Jun">June</option>
 				<option value="Jul">July</option>
 			</select>
-
-			
-
 				
 			</div>
 		</header>
