@@ -31,7 +31,7 @@ function Home() {
 				<Card title="Notifications" icon={<BsFillBellFill className='card_icon' />} totalItems={notificationAmount} />
 			</div>
 
-			<div className='charts overflow-x-scroll xl:overflow-hidden'>
+			<div className='charts overflow-x-scroll 2xl:overflow-hidden'>
 				<div className='flex flex-col'>
 					<TextTitle title="Campaign Metrics" />
 					<ResponsiveContainer width={isMobile ? 500 : '100%'} height={300}>
@@ -52,9 +52,9 @@ function Home() {
 							<YAxis />
 							<Tooltip />
 							<Legend />
-							<Bar dataKey="clickThroughRates" fill="#8884d8" />
-							<Bar dataKey="conversionRates" fill="#eee9" />
-							<Bar dataKey="totalSales" fill="#82ca9d" />
+							<Bar dataKey="clickThroughRates" name='Click Through Rates' fill="#8884d8" />
+							<Bar dataKey="conversionRates" name="Conversion Rates" fill="#882" />
+							<Bar dataKey="totalSales" name="Total Sales" fill="#82ca9d" />
 						</BarChart>
 					</ResponsiveContainer>
 				</div>
@@ -62,7 +62,7 @@ function Home() {
 
 				<div className='flex flex-col'>
 					<TextTitle title="Product Sales" />
-					<ResponsiveContainer width={isMobile ? 500 : '100%'}height={300} >
+					<ResponsiveContainer width={isMobile ? 500 : '100%'} height={300} >
 						<LineChart
 							width={500}
 							height={300}
@@ -79,9 +79,9 @@ function Home() {
 							<YAxis />
 							<Tooltip />
 							<Legend />
-							<Line type="monotone" dataKey="product1" stroke="red" />
-							<Line type="monotone" dataKey="product2" stroke="#3df" />
-							<Line type="monotone" dataKey="product3" stroke="#82ca9d" />
+							<Line type="monotone" dataKey="product1"  name='Sneezy Kicks' stroke="red" />
+							<Line type="monotone" dataKey="product2"  name='Jady Jackets' stroke="#3df" />
+							<Line type="monotone" dataKey="product3"  name="Mini Shirts" stroke="#82ca9d" />
 						</LineChart>
 					</ResponsiveContainer>
 				</div>
@@ -89,9 +89,9 @@ function Home() {
 			</div>
 
 			<div className='charts-full overflow-x-scroll xl:overflow-hidden'>
-				<div className='flex flex-col'>
+				<div className='flex flex-col items-center justify-center'>
 					<TextTitle title="Competitor Comparison"/>
-					<ResponsiveContainer width={800} height="100%">
+					<ResponsiveContainer width={isMobile ? 500 : '100%'} height="100%">
 					<LineChart
 						width={500}
 						height={300}
@@ -108,9 +108,9 @@ function Home() {
 						<YAxis />
 						<Tooltip />
 						<Legend />
-						<Line type="monotone" dataKey="competitorA" stroke="#8884d8" />
-						<Line type="monotone" dataKey="competitorB" stroke="#3df" />
-						<Line type="monotone" dataKey="competitorC" stroke="#82ca9d" />
+						<Line type="monotone" dataKey="competitorA" name="Global Stores PTY" stroke="#8884d8" />
+						<Line type="monotone" dataKey="competitorB" name="Le Brand PTY " stroke="#3df" />
+						<Line type="monotone" dataKey="competitorC" name="Coast Line Stores PTY" stroke="#82ca9d" />
 					</LineChart>
 				</ResponsiveContainer>
 

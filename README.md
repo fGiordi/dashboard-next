@@ -26,7 +26,7 @@
    - [ ] You should also be able to filter based on highest and lowest product sales based on Month. 
 - [ ] Once you get to the landing page, you should be able to filter based on the Campaign by selecting on the top left Dropdown menu which says 'Choose a Campaign'
 - [ ] The 2 Campaigns We currently have running at the moment are
-   - [ ] Campaign Move(this is the default campaign selected)
+   - [ ] Campaign Move (this is the default campaign selected)
    - [ ] Campaign Shooters ( you will need to select this to see the data filtered )
 - [ ] Once you start filtering between the different campaigns, you will see the 3 different graphs reflecting the data.
 
