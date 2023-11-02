@@ -65,7 +65,6 @@ function Header({ openSidebar }: IHeader) {
 				<option value="Jun">June</option>
 				<option value="Jul">July</option>
 			</select>
-				
 			</div>
 		</header>
 	)
