@@ -24,6 +24,8 @@ interface IFilteredProps  {
 	data: DataPoint[];
 	productSalesData: ProductSales[];
   competitorData: Competitor[];
+	highestMonth: string,
+	lowestMonth: string,
 }
 
 export type Store = {
@@ -32,11 +34,12 @@ export type Store = {
   competitorData: Competitor[];
 	handleCampaignChange: (name: CampaignValues) => void
 	notificationAmount: number,
-	handleMonthChange: (month: string) => void
+	handleMonthChange: (month: string, autoSelect?: boolean) => void
 	filteredProps: IFilteredProps,
 	hasFiltered: boolean,
+	hasProductSalesFiltered: boolean,
 	findHighestSaleMonth: () => void;
-
+	findLowestSaleMonth: () => void;
 };
 
 

@@ -10,7 +10,7 @@ import { useMediaQuery } from '../hooks/useMediaQuery';
 function Home() {
 	const { data, productSalesData, competitorData, notificationAmount, hasFiltered, filteredProps } = useStore();
 
-	const { isMobile, isTablet, isDesktop } = useMediaQuery();
+	const { isMobile } = useMediaQuery();
 
 	console.log('filteredProps', filteredProps)
 

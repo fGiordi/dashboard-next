@@ -36,6 +36,7 @@ export const useStore = create<Store>((set, get) => ({
 		set({
 			hasFiltered: true,
 			filteredProps: {
+				...get().filteredProps,
 				data: filteredData,
 				productSalesData: filteredProductSales,
 				competitorData: filteredCompetitor
@@ -43,13 +44,16 @@ export const useStore = create<Store>((set, get) => ({
 		})
 	},
 	hasFiltered: false,
+	hasProductSalesFiltered: false,
 	filteredProps: {
 		data: [],
 		productSalesData: [],
-		competitorData: []
+		competitorData: [],
+		lowestMonth: '',
+		highestMonth: '',
 	},
 	findHighestSaleMonth: () => {
-    const { productSalesData } = get();
+    const { productSalesData, handleMonthChange } = get();
     let highestSales = 0;
     let highestMonth = '';
 
@@ -59,9 +63,20 @@ export const useStore = create<Store>((set, get) => ({
         highestMonth = monthData.name;
       }
     });
-
-		console.log('Highest Month', highestMonth)
-
-    return highestMonth;
+		handleMonthChange(highestMonth)
   },
+	findLowestSaleMonth: () => {
+		const { productSalesData, handleMonthChange } = get();
+		let lowestSales = Infinity;
+		let lowestMonth = '';
+	
+		productSalesData.forEach((monthData) => {
+			const totalSales = monthData.product1 + monthData.product2 + monthData.product3;
+			if (totalSales < lowestSales) {
+				lowestSales = totalSales;
+				lowestMonth = monthData.name;
+			}
+		});
+		handleMonthChange(lowestMonth)
+	},
 }));

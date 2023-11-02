@@ -9,11 +9,11 @@ interface IHeader {
 }
 
 function Header({ openSidebar }: IHeader) {
-	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth} = useStore()
+	const {handleCampaignChange, handleMonthChange, hasFiltered, findHighestSaleMonth, hasProductSalesFiltered, findLowestSaleMonth} = useStore()
 
 	const [selectedCampaign, setSelectedCampaign] = useState('move')
 	const [selectedMonth, setSelectedMonth] = useState('Choose a Month')
-	const [selectedSalesOption, setSelectedSalesOption] = useState('By Number of Sales')
+	const [selectedSalesOption, setSelectedSalesOption] = useState('Product Sales filter')
 
 	const handleCampaign = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		handleCampaignChange(event.target.value as CampaignValues)
@@ -21,9 +21,12 @@ function Header({ openSidebar }: IHeader) {
   };
 
 	const handleNumSales = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		const {value} = event.target
 		setSelectedSalesOption(event.target.value)
-		if(event.target.value === 'highest') {
+		if(value === 'highest') {
 			findHighestSaleMonth()
+		} else if(value === 'lowest') {
+			findLowestSaleMonth()
 		}
   };
 
@@ -35,6 +38,10 @@ function Header({ openSidebar }: IHeader) {
 	useEffect(() => {
 		if(!hasFiltered) {
 			setSelectedMonth('Choose a Month')
+			setSelectedSalesOption('Product Sales filter')
+		} if(hasFiltered) {
+			// when filtering by month reset the product sales option
+			setSelectedSalesOption('Product Sales filter')
 		}
 	}, [hasFiltered])
 
@@ -56,8 +63,8 @@ function Header({ openSidebar }: IHeader) {
 			</div>
 
 			<div>
-				<select value={selectedSalesOption} onChange={handleNumSales} id="sales" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-				<option selected disabled>By Number of Sales</option>
+				<select  value={selectedSalesOption} onChange={handleNumSales} id="sales" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+				<option selected disabled>Product Sales filter</option>
 				<option value="highest">Highest Month for Product Sales</option>
 				<option value="lowest">Lowest Month for Product Sales</option>
 			</select>
